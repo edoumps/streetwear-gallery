@@ -1,0 +1,22 @@
+// ALL THE MAIN VARIABLES
+
+$main-font: 'Inter', sans-serif;
+// Theme Colors
+
+// Body Fonts Scale h1,paragraphs
+
+// Fonts-Size
+$testi-text-size: 18px;
+$testi-author-size: 14px;
+$testi-job-size: 12px;
+
+// Font Weight
+$testi-text-weight: 500;
+
+// Spacing (line-height)
+@mixin buttons {
+  border: black solid 3px;
+  background: rgb(248, 143, 143);
+  padding: 5px 10px;
+  color: rgb(39, 39, 39);
+}

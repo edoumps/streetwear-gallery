@@ -1,0 +1,104 @@
+// ALL THE MAIN SETTINGS
+
+// Variables Partial
+@import '_variables';
+
+// Utilities Partial
+@import '_utilities';
+
+// Mixins
+@import '_mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+  line-height: 1.5;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+
+  .card {
+    @include buttons;
+
+    height: 600px;
+    width: 270px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+
+    .card-content {
+      display: block;
+      position: relative;
+      text-align: center;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+      a {
+        @include buttons;
+        margin-top: 60px;
+        padding: 10px 20px;
+        position: absolute;
+        left: 50%;
+      }
+    }
+  }
+
+  // POPUP
+
+  .popup-wrapper {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .popup {
+      @include buttons;
+      // display: none;
+      margin: 50px auto;
+      max-width: 400px;
+      height: 300px;
+      padding: 15px;
+      text-align: center;
+
+      .popup-close {
+        @include buttons;
+        // float: right;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+      }
+      .popup-content {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        h1 {
+          margin-bottom: 20px;
+          color: red;
+        }
+        h2 {
+          color: red;
+          font-size: 38px;
+        }
+        a {
+          @include buttons;
+          margin-top: 40px;
+          padding: 20px 40px;
+        }
+      }
+    }
+  }
+}
